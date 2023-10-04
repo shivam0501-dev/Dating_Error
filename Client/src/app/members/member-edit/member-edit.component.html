@@ -1,0 +1,45 @@
+<div *ngIf="member" class="row">
+    <div class="col-4"> 
+        <h1>Your Profile</h1>
+    </div>
+    <div class="col-8">
+        <div class="alert alert-info">
+            <p><strong>Information : </strong>
+            You have made changes. Any Unsaved Changes will be lost.
+            </p>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <img src="{{member.photoUrl || 'not found'}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail"/>
+            <div class="card-body">
+                <div>
+                    <strong>Location : </strong>
+                    <p>{{member.city}} , {{member.country}}</p>
+                </div>
+                <div>
+                    <strong>Age :</strong>
+                    <p>{{member.age}}</p>
+                </div>
+                <div>
+                    <strong>Last Active : </strong>
+                    <p>{{member.lastActive}}</p>
+                </div>
+                <div>
+                    <strong>member Secence : </strong>
+                    <p>{{member.created}}</p>
+                </div>
+                
+            </div>
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    <button class="btn btn-succcess col-12">Save Changes</button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        
+    </div>
+</div>>
